@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="margin-bottom:8 0px;">
+        <h1 style="display: flex; justify-content: center;">Flappy Bird</h1>    
+        <h3 style="display: flex; justify-content: center;">Enter Room ID to play with a friend or click enter on game to play by yourself:</h3>
+    
+       <div style="display: flex; justify-content:space-evenly">
+            <!-- <form id="roomIDform">
+                
+            </form> -->
+            <div style="display: flex; justify-content: left;">
+                <button type="submit" id="newIDbutton">Generate new room ID</button>
+                <div id="newIDdiv">
+                    
+                </div>
+            </div>
+            
+            <div>
+                <h4 style="text-underline-position: below;">Join an existing room</h4>
+                <input placeholder="room id">
+                <button type="submit" id="joinButton">Join Room</button>
+            </div>
+            
+            <form>
+                <input>
+                <button type="submit">Submit</button> 
+            </form>
+       </div> 
+
+        
+    
+    </div>
+    
+    <canvas id="gameCanvas" style="border:1px solid black;">
+
+    </canvas>
+    <script src="bundle.js"></script>
+</body>
+</html>
