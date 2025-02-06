@@ -33,15 +33,30 @@ function setupSocketListeners() {
 
   }
 
-function joinRoom(id) {
+function createRoom(id) {
     socket.emit("create", id, (response) => {
         console.log("Status: ", response.status);
         console.log("Rooms: ", response.rooms);
     })
 }  
 
+function joinRoom(id) {
+    socket.emit("join", id, (response) => {
+      console.log("Response: ", response.message);
+      
+      if(response.message == "failure"){
+        return false;
+      }
+      else{
+        return true;
+      }
+
+    });
+  }
+
 
 module.exports = {
     setupSocketListeners,
+    createRoom,
     joinRoom
 }
